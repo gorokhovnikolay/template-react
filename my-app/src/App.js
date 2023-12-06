@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// App.js имеет декларативный стиль. Императивного стиля не нашел
+
+export const App = () => {
+	const data = new Date();
+	const nowYear = data.getFullYear();
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -17,9 +21,8 @@ function App() {
 				>
 					Learn React
 				</a>
+				<span>{nowYear}</span>
 			</header>
 		</div>
 	);
-}
-
-export default App;
+};
